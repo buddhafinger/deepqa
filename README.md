@@ -1,4 +1,8 @@
-DeepQA Deployment for testing chatbots.
+DeepQA Deployment for testing chatbots - Work in progress original DeepQA source taken from:
+
+- https://github.com/llSourcell/chatbot_tutorial
+baesd on:
+- https://github.com/Conchylicultor/DeepQA
 
 
 Note: after iniital build if error about unable to find django session table then run migration on deepqa node.
