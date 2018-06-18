@@ -24,6 +24,9 @@ kubectl get pods (note deepqa pod name)
 kubectl exec -it <pod name> -- /bin/bash
 python manage.py migrate
 
+#To browse to bot example.
+http://192.168.99.101:8000/ #change ip to ip presented by your 'kubectl cluster-info' IP address.
+
 
 #changes from branch hosted by Siraj (||Source||) - https://github.com/llSourcell/chatbot_tutorial
 
