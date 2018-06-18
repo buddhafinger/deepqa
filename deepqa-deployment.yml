@@ -1,0 +1,30 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: deepqa
+spec:
+  selector:
+    matchLabels:
+      app: deepqa 
+      role: master
+      tier: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deepqa 
+        role: master
+        tier: backend
+    spec:
+      containers:
+        - name: deepqa 
+          image: buddhafinger/deepqa:latest
+          ports:
+            - containerPort: 8000 
+          volumeMounts:
+            - name: data01
+              mountPath: /data01
+      volumes:
+        - name: data01
+          persistentVolumeClaim:
+            claimName: deepqa-pv-claim
