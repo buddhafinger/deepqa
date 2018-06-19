@@ -5,7 +5,9 @@ baesd on:
 - https://github.com/Conchylicultor/DeepQA
 
 DISCLAIMER:
+!!! --- IMPORTANT --- !!! - The Dockerfile contains a secret key - you should NOT reuse this key or expose your key and manage secrets responsibly. 
 This is a blind rehash with no prior knoweldge on most of the components used - use with caution and not in production.
+
 This readme is a fast work in progress - basic - minimal 
 
 Usage:
@@ -36,3 +38,14 @@ http://192.168.99.101:8000/ #change ip to ip presented by your 'kubectl cluster-
 - Installed pre-trained data
 - updated to provision seperate redis server
 - downgraded channels and django due to https://github.com/Conchylicultor/DeepQA/issues/187 - recommended by wujiajia2017scnu 
+
+#TODO
+fix migrations so they don't need to be re-run after docker run
+make option for persistent redis storage/volumes.
+train box so it's not talking giberish.
+
+
+
+
+
+
